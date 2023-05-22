@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/mainbg.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+aside{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+}
+
+.title-box{
+    width: 100%;
+    background: rgb(86, 94, 89, 0.5);
+    margin-top: 20vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(201, 190, 201);
+    font-size: 40px;
+}
+
+main{
+    background-color: rgba(157, 163, 168, 0.9);
+    flex: 2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-info{
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+}
+
+.form-info > h3{
+    color: rgb(95, 79, 95);
+    font-size: 30px;
+}
+
+.form-info > p{
+    color: rgb(74, 65, 74);
+    font-size: 15px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.form-row{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.form-col{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #637379;
+    font-weight: bold;
+}
+
+span{
+    font-style: italic;
+}
+
+button[type=submit]{
+    margin-top: 2%;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 30px;
+    background-color: #80949c;
+}
+
+.check{
+    margin-top: 2%;
+    display: flex;
+    gap: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(62, 60, 60);
+}
+
+#login{
+   color: #80949c;
+}
