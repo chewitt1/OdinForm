@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --accent-col: rgb(95, 79, 95);
+    --accent-col2: rgb(134, 114, 134);
+    --para-col: rgb(86, 70, 86);
+}
+
 body{
     background-image: url(./images/mainbg.jpg);
     background-size: cover;
@@ -48,7 +54,7 @@ main{
 }
 
 .form-info > h3{
-    color: rgb(95, 79, 95);
+    color: var(--accent-col);
     font-size: 30px;
 }
 
@@ -67,7 +73,7 @@ form{
 
 .form-row{
     width: 100%;
-    margin-top: 2%;
+    margin-top: 4%;
     display: flex;
     justify-content: center;
     gap: 10%;
@@ -80,9 +86,21 @@ form{
 
 label{
     text-transform: uppercase;
-    font-size: 9px;
-    color: #637379;
+    font-size: 10px;
+    color: var(--para-col);
     font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password]{
+    width: 16vw;
+    height: 4vh;
+    margin-top: 2%;
+    padding-left: 2%;
+    border-radius: 6px;
+    border: 2px inset --accent-col;
 }
 
 span{
@@ -90,11 +108,11 @@ span{
 }
 
 button[type=submit]{
-    margin-top: 2%;
+    margin-top: 4%;
     border: none;
     border-radius: 6px;
     padding: 10px 30px;
-    background-color: #80949c;
+    background-color: var(--accent-col2);
 }
 
 .check{
@@ -107,5 +125,24 @@ button[type=submit]{
 }
 
 #login{
-   color: #80949c;
+   color: var(--accent-col);
+}
+
+/*Validation*/
+input:focus:invalid {
+    border: none;
+    outline: 2px inset rgb(235, 88, 88);
+    border-radius: 6px;
+}
+
+input:focus:valid {
+    border: none;
+    outline: 2px inset green;
+    border-radius: 6px;
+}
+
+.error{
+    color: rgb(179, 54, 54);
+    font-size: 12px;
+    display: none;
 }

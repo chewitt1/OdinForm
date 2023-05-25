@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Sign Up</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <aside>
@@ -17,14 +18,16 @@
     </aside>
     <main>
         <div class="form-info">
-            <h3 class="form-title">Bloom Community Newsletter</h3>
+            <img src="./images/logo.png" alt="flower" width="50" height="50">
+            <h3 class="form-title">Bloom Community Portal</h3>
             <p>Sign up <span>now</span> to get in the loop</p>
         </div>
-        <form action="">
+        <form action="http://localhost/signup.php" method="post">
             <div class="form-row">
                 <div class="form-col">
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" id="fname">
+                    <label for="fname">*First Name</label>
+                    <input type="text" name="fname" id="fname" required>
+                    <p class="error error-name">*First name is required</p>
                 </div>
                 <div class="form-col">
                     <label for="lname">Last Name</label>
@@ -33,22 +36,25 @@
             </div>
             <div class="form-row">
                 <div class="form-col">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <label for="email">*Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <p class="error error-email">*Email is required</p>
                 </div>
                 <div class="form-col">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone">
+                    <input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please enter a phone number,  (Format: 123-456-7890)">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-col">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass">
+                    <label for="pass">*Password</label>
+                    <input type="password" name="pass" id="pass" required>
+                    <p class="error error-pass">*Password is required</p>
                 </div>
                 <div class="form-col">
-                    <label for="pass-c">Confirm Password</label>
-                    <input type="password" name="pass-c" id="pass-c">
+                    <label for="pass-c">*Confirm Password</label>
+                    <input type="password" name="pass-c" id="pass-c" required>
+                    <p class="error error-pass-c">*Passwords do not match</p>
                 </div>
             </div>
             <button type="submit">Create Account</button>
